@@ -243,6 +243,47 @@ aside {
     pointer-events: none;
 }
 
+        /* Modal Overlay Background */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        /* Modal Box Content */
+        .modal-box {
+            background-color: #060CE9;
+            border: 4px solid #ffffff;
+            width: 60%;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .modal-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .close-btn {
+            background-color: #FFFF00;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
 /* -------------------------------------------------------- */
 /* FOOTER */
 /* -------------------------------------------------------- */

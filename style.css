@@ -9,12 +9,12 @@
   /* Background Colors: */
   --background-color: #ffffff;
   --content-background-color: #ffffff;
-  --sidebar-background-color: #f59d7d;
+  --sidebar-background-color: #447DA6;
 
   /* Text Colors: */
   --text-color: #3e3e3e;
   --sidebar-text-color: #ffffff;
-  --link-color:  #f59d7d;
+  --link-color:  #447DA6;
   --link-color-hover: #8c6a53;
 
   /* Text: */
@@ -25,7 +25,7 @@
   /* Other Settings: */
   --margin: 10px;
   --padding: 20px;
-  --border: 17px solid #f59d7d;
+  --border: 17px solid #447DA6;
   --round-borders: 6px;
   --sidebar-width: 400px;
 }

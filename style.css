@@ -93,7 +93,6 @@ a:focus {
   grid-template: "header header" auto "jeopardy main" auto "footer footer" auto / var(--sidebar-width) auto;
   /* Confused by the grid? Check out my tutorial: https://petrapixel.neocities.org/coding/positioning-tutorial#grid */
 }
-aside { grid-area: jeopardy; }
 
 main {
   grid-area: main;
@@ -134,6 +133,16 @@ header {
 /* -------------------------------------------------------- */
 /* SIDEBARS */
 /* -------------------------------------------------------- */
+aside {
+  grid-area: aside;
+  border: var(--border);
+  border-radius: var(--round-borders);
+  overflow: hidden;
+  background: var(--sidebar-background-color);
+  padding: var(--padding);
+  color: var(--sidebar-text-color);
+}
+
 .jeopardy-board {
   display: flex-center;
   flex-direction: row; /* Aligns columns horizontally */

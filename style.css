@@ -134,7 +134,7 @@ header {
 /* SIDEBARS */
 /* -------------------------------------------------------- */
 .jeopardy-board {
-  display: flex;
+  display: flex-center;
   flex-direction: row; /* Aligns columns horizontally */
   gap: 15px;          /* Adds spacing between columns */
   justify-content: center; /* Centers the whole board on screen */

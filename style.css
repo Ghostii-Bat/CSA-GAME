@@ -201,11 +201,47 @@ header {
 /* -------------------------------------------------------- */
 /* JEOPARDY STUFFZ */
 /* -------------------------------------------------------- */
+.jeapardy-column{
+    display: grid;
+    grid-template-rows: auto repeat(5,1fr);
+    gap: 10px;
+    width: 200px;
+    height: 80vh;
+}
+.category-header{
+  background-color: var(--content-background-color);
+  border: 2px solid var(--sidebar-background-color);
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.clue-btn{
+    background-color:var(--content-background-color);
+    color: var(--sidebar-background-color);
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.clue-btn:hover{
+    background-color: #27D6F5;
+    transform: scale(1.02);
+}
 
 
 
 /*Visited/Clicked state*/
-
+.clue-btn.disabled{
+    background-color: #020557;
+    color: #4a4a4a;
+    border-color: var(--sidebar-background-color);
+    cursor: not-allowed;
+    pointer-events: none;
+}
         /* Modal Overlay Background */
         .modal-overlay {
             display: none;

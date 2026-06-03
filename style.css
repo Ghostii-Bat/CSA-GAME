@@ -151,34 +151,31 @@ header {
 }
 
 /* Category header styling */
-.category-header {
-  background-color: #060ce9;
-  color: white;
-  text-align: center;
-  padding: 15px 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: 2px solid black;
-  min-height: 40px;
+.category-header{
+  background-color: var(--content-background-color);
+  border: 2px solid var(--sidebar-background-color);
   display: flex;
-  align-items: center;
   justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
 }
 
 /* Clue button styling */
-.clue-btn {
-  background-color: #060ce9;
-  color: #f1b312;
-  font-size: 24px;
-  font-weight: bold;
-  border: 2px solid black;
-  padding: 20px 0;
-  cursor: pointer;
-  transition: background-color 0.2s;
+.clue-btn{
+    background-color:var(--content-background-color);
+    color: var(--sidebar-background-color);
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .clue-btn:hover {
   background-color: #1a22f0;
+  transform: scale(1.02);
 }
 
 /* Dimmed state for used questions */
@@ -203,44 +200,10 @@ header {
 /* -------------------------------------------------------- */
 /* JEOPARDY STUFFZ */
 /* -------------------------------------------------------- */
-.jeapardy-column{
-    display: grid;
-    grid-template-rows: auto repeat(5,1fr);
-    gap: 10px;
-    width: 200px;
-    height: 80vh;
-}
-.category-header{
-  background-color: var(--content-background-color);
-  border: 2px solid var(--sidebar-background-color);
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 10px;
-}
-.clue-btn{
-    background-color:var(--content-background-color);
-    color: var(--sidebar-background-color);
-    font-size: 1.8rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-.clue-btn:hover{
-    background-color: #27D6F5;
-    transform: scale(1.02);
-}
+
+
+
 /*Visited/Clicked state*/
-.clue-btn.disabled{
-    background-color: #020557;
-    color: #4a4a4a;
-    border-color: var(--sidebar-background-color);
-    cursor: not-allowed;
-    pointer-events: none;
-}
 
         /* Modal Overlay Background */
         .modal-overlay {

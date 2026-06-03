@@ -144,7 +144,7 @@ header {
 /* Individual columns that stack buttons vertically */
 .jeopardy-column {
   display: flex;
-  flex-direction: column; /* Stacks header and buttons vertically */
+  flex-direction: row; /* Stacks header and buttons vertically */
   gap: 10px;             /* Adds spacing between buttons */
   flex: 1;               /* Makes all columns equal width */
   max-width: 180px;      /* Prevents columns from getting too wide */

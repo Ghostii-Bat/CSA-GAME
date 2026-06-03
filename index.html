@@ -103,15 +103,28 @@
 				choicesContainer.appendChild(choiceBtn);
 			});
         }
+        function checkAnswer(selectedIndex, correctIndex, clickedButton) {
+  const allChoiceButtons = choicesContainer.querySelectorAll('button');
 
-        function closeClue() {
-            modal.style.display = 'none';
-            if (currentButton) {
-                // Dim out and clear out the point value after viewing
-                currentButton.classList.add('disabled');
-                currentButton.textContent = ''; 
-            }
-        }
+  // Disable all choice buttons immediately so the player can't click multiple options
+  allChoiceButtons.forEach(btn => btn.disabled = true);
+
+  if (selectedIndex === correctIndex) {
+    clickedButton.style.backgroundColor = 'lightgreen'; // Correct answer turns green
+  } else {
+    clickedButton.style.backgroundColor = 'lightcoral'; // Chosen incorrect answer turns red
+    allChoiceButtons[correctIndex].style.backgroundColor = 'lightgreen'; // Show the right answer anyway
+  }
+}
+
+function closeClue() {
+  modal.style.display = 'none';
+  if (currentButton) {
+    // Dim out and clear out the point value after viewing
+    currentButton.classList.add('disabled');
+    currentButton.disabled = true; // Programmatically disable the game board button
+  }
+}
     </script>
 
 </body>

@@ -639,7 +639,7 @@ main h6 {
     padding: 15px;
   }
     .jeopardy-board {
-    flex-direction: column; /* Stack columns on top of each other */
+    flex-direction: row; 
     align-items: center;    /* Center the stacked columns */
     gap: 25px;              /* Increase gap to separate categories clearly */
   }

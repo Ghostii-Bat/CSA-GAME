@@ -608,7 +608,7 @@ main h6 {
 /* -------------------------------------------------------- */
 
 /* CSS Code for devices < 800px */
-@media (max-width: 800px) {
+@media (max-width: 750px) {
   body {
     font-size: 14px;
   }
@@ -641,12 +641,12 @@ main h6 {
     .jeopardy-board {
     flex-direction: row; 
     align-items: center;    /* Center the stacked columns */
-    gap: 25px;              /* Increase gap to separate categories clearly */
+    gap: 10px;              /* Increase gap to separate categories clearly */
   }
 
   .jeopardy-column {
     width: 100%;            /* Force column to take full width available */
-    max-width: 400px;       /* Keep the mobile columns from stretching too wide */
+    max-width: 150px;       /* Keep the mobile columns from stretching too wide */
   }
 
   .clue-btn {

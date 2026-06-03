@@ -93,6 +93,7 @@ a:focus {
   grid-template: "header header" auto "jeopardy main" auto "footer footer" auto / var(--sidebar-width) auto;
   /* Confused by the grid? Check out my tutorial: https://petrapixel.neocities.org/coding/positioning-tutorial#grid */
 }
+aside { grid-area: jeopardy; }
 
 main {
   grid-area: main;

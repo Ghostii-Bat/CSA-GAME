@@ -50,9 +50,24 @@
     <div class="jeopardy-column">
         <div class="category-header">Coding</div>
         <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.')">$200</button>
+	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.')">$200</button>
+	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.')">$200</button>
+        <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.')">$200</button>
+        <button class="clue-btn" onclick="openClue(this, 'The structural skeleton of a web page.')">$400</button>
+        <button class="clue-btn" onclick="openClue(this, 'The structural skeleton of a web page.')">$400</button>
+        <button class="clue-btn" onclick="openClue(this, 'The structural skeleton of a web page.')">$400</button>
         <button class="clue-btn" onclick="openClue(this, 'The structural skeleton of a web page.')">$400</button>
         <button class="clue-btn" onclick="openClue(this, 'CSS stands for Cascading Style ____.')">$600</button>
+        <button class="clue-btn" onclick="openClue(this, 'CSS stands for Cascading Style ____.')">$600</button>
+        <button class="clue-btn" onclick="openClue(this, 'CSS stands for Cascading Style ____.')">$600</button>
+        <button class="clue-btn" onclick="openClue(this, 'CSS stands for Cascading Style ____.')">$600</button>
         <button class="clue-btn" onclick="openClue(this, 'A loop that repeats indefinitely.')">$800</button>
+		<button class="clue-btn" onclick="openClue(this, 'A loop that repeats indefinitely.')">$800</button>
+	    <button class="clue-btn" onclick="openClue(this, 'A loop that repeats indefinitely.')">$800</button>
+	    <button class="clue-btn" onclick="openClue(this, 'A loop that repeats indefinitely.')">$800</button>
+        <button class="clue-btn" onclick="openClue(this, 'Git command used to save changes locally.')">$1000</button>
+        <button class="clue-btn" onclick="openClue(this, 'Git command used to save changes locally.')">$1000</button>
+        <button class="clue-btn" onclick="openClue(this, 'Git command used to save changes locally.')">$1000</button>
         <button class="clue-btn" onclick="openClue(this, 'Git command used to save changes locally.')">$1000</button>
     </div>
 
@@ -60,6 +75,7 @@
     <div class="modal-overlay" id="clueModal">
         <div class="modal-box">
             <div class="modal-text" id="modalContent">Clue text goes here...</div>
+			<div id="choicesContainer" style="margin:15px 0; display: flex; flex-direction: column; gap: 10px;"></div>
             <button class="close-btn" onclick="closeClue()">Close Clue</button>
         </div>
     </div>
@@ -68,12 +84,24 @@
     <script>
         const modal = document.getElementById('clueModal');
         const modalContent = document.getElementById('modalContent');
+		const buttonsContent = document.getElementById('choicesContainer');
         let currentButton = null;
 
-        function openClue(button, clueText) {
+        function openClue(button, clueText,choicesArray, correctIndex) {
             currentButton = button;
             modalContent.textContent = clueText;
+			choicesContainer.innerHTML ='';
             modal.style.display = 'flex';
+			choicesArray.forEach((choiceText, index) => {
+				const choiceBtn = document.creatElement('button');
+				choiceBtn.textContent = choiceText;
+				choiceBtn.style.padding = '8px';
+				choiceBtn.style.cursor = 'pointer';
+				choiceBtn.onclick = function() {
+					checkAnswer(index, correctIndex, choiceBtn);
+				};
+				choicesContainer.appendChild(choiceBtn);
+			});
         }
 
         function closeClue() {

@@ -670,6 +670,7 @@ main h6 {
     width: 100%;            /* Force column to take full width available */
     max-width: 120px;       /* Keep the mobile columns from stretching too wide */
     flex-shrink: 1;
+    min-width: 0;
   }
 
   .clue-btn {

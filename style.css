@@ -683,8 +683,6 @@ main h6 {
     padding: 10px 5px;
     width: 100%;            
     max-width: 120px;
-    flex-shrink: 1;
-    min-width: 0;
   }
 
 

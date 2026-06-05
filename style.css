@@ -681,8 +681,7 @@ main h6 {
   .category-header {
     font-size: 8px;        /* Optimize category text for small screens */
     padding: 10px 5px;
-    width: 100%;            
-    max-width: 180px;
+     flex-wrap: wrap;
   }
 
 

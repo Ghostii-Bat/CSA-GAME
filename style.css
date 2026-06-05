@@ -288,7 +288,6 @@ aside {
             font-size: clamp(14px, 5cqw, 28px);
             font-weight: bold;
             margin-bottom: 30px;
-            text-transform: uppercase;
         }
 
         .close-btn {

@@ -209,7 +209,7 @@ header {
     align-items:center;
     gap: 20px;
     margin:0;
-    height: auto;  
+    height: 20vh;  
     width: 160px;  
     font-family: sans-serif; 
 }
@@ -220,7 +220,7 @@ header {
     border: 3px solid #447DA6;
     flex-direction: column;  
     padding: 5px;
-     height: auto;  
+     height: 100%;  
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -242,7 +242,7 @@ header {
     justify-content: center; 
     gap: 10px;               /* Adds a clean space gap between the buttons */
     width: 100%;
-    margin-top: 10px;        /* Pushes buttons slightly below the main score digits */
+    margin-top: 5px;        /* Pushes buttons slightly below the main score digits */
 }
 
 .team-card h3 {

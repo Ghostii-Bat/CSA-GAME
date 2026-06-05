@@ -260,10 +260,6 @@ header {
     color: #447DA6;
     margin-bottom: 10px;
 }
-.scoreboard-row .team-card {
-  /* Shifts card rows lower down, skipping the category title row */
-  grid-row: span 1; 
-}
 
 .score-adjusters button {
     background-color: var(--background-color);

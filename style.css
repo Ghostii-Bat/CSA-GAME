@@ -205,7 +205,8 @@ header {
 .scoreboard-row {
     display: flex;
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;  
+    grid-template-rows: auto repeat(5, 1fr); 
     align-items:center;
     gap: 20px;
     margin-top: 30px;
@@ -216,10 +217,10 @@ header {
 
 .team-card {
     background-color: var(--background-color);
-    color: white;
+    color: #447DA6;
     border: 3px solid #447DA6;
     flex-direction: column;  
-    padding: 15px;
+    padding: 5px;
     min-width: 100px;
     height: 10px;
     width: auto;
@@ -257,6 +258,10 @@ header {
     font-weight: bold;
     color: #447DA6;
     margin-bottom: 10px;
+}
+.scoreboard-row .team-card {
+  /* Shifts card rows lower down, skipping the category title row */
+  grid-row: span 1; 
 }
 
 .score-adjusters button {

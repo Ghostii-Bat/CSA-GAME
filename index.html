@@ -47,6 +47,8 @@
         <!-- =============================================== -->
 
     <!-- JEOPARDY COLUMN -->
+		<main id="content" style="grid-area: main;
+  width: 1000px;">
 	<div class="jeopardy-board">
 		<div class="jeopardy-column">
         <div class="category-header" >CSA JEAPORDY MCQ BOARD</div>
@@ -83,7 +85,7 @@
 		<button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$1000</button>
 		</div>
     </div>
-
+</main>
     <!-- INTERACTIVE MODAL POP-UP -->
     <div class="modal-overlay" id="clueModal">
         <div class="modal-box">
@@ -92,12 +94,13 @@
             <button class="close-btn" onclick="closeClue()">Close Clue</button>
         </div>
     </div>
+	<aside class="left-sidebar">
+		<div class="sidebar-section">
     <div class="jeopardy-board">
-		<main id="content" style="grid-area: main;
-  width: 1000px;">
     <div id="scoreboardContainer" class="scoreboard-row"></div>
-		</main>
 	</div>
+		</div>
+	</aside>
   <!-- =============================================== -->
       <!-- FOOTER -->
       <!-- =============================================== -->

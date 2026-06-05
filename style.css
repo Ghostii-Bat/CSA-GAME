@@ -267,6 +267,13 @@ aside {
         }
 
         /* Modal Box Content */
+        #modalContent {
+          height: 200px;
+          max-height:50vh;
+          overflow-y: auto;
+          overflow-x: hidden;
+          word-wrap: break-word;
+        }
         .modal-box {
             background-color: var(--sidebar-background-color);
             border: var(--border);

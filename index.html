@@ -51,37 +51,35 @@
 		<div id="scoreboardContainer" class="scoreboard-row"></div>
 		<div class="jeopardy-column">
         <div class="category-header" >CSA JEAPORDY MCQ BOARD</div>
-        <button class="clue-btn" onclick="openClue(this, 'Which of the following  pairs of declarations are the most appropriate to store a student’s average course grade in the variable GPA  and the number of students in the variable numStudents?',['A: int GPA; int numStudents;','B:double GPA; double numStudents;','C:int GPA; boolean numStudents;','D: double GPA; boolean numStudents;'],1)">$200</button>
-	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$400</button>
-	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$600</button>
-        <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$800</button>
-		<button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$1000</button>
-
+        <button class="clue-btn" onclick="openClue(this, 'Which of the following  pairs of declarations are the most appropriate to store a student’s average course grade in the variable GPA  and the number of students in the variable numStudents?',['A: int GPA; int numStudents;','B:double GPA; double numStudents;','C:int GPA; boolean numStudents;','D: double GPA; boolean numStudents;'],1,200)">$200</button>
+	    <button class="clue-btn" onclick="openClue(this, 'int x = 3; int y = 2; if (y/x>0) System.out.println(“first”); System.out.println(“second”);',['A: first','B: second','C: first second','D:Nothing is printed'],1,400)">$400</button>
+	    <button class="clue-btn" onclick="openClue(this, 'Consider the following class definition. public class Party{private int numPeople;private double volOfMusic; public Party(int p,  double ){numPeople =n;volOfMusic = v;}}',['A: Party p = Party(10, 5.0);','B: Party p = new Party(10, 5,0);','C: Party p = new Party(5.0, 10);','D: new Party p = (10, 5.0);'],1,600)">$600</button>
+        <button class="clue-btn" onclick="openClue(this, 'public static int mystery(int x){return x*x;} What is returned by mystery(4)',['A: 4','B: 8','C: 16','D: 10'],2,800)">$800</button>
+		<button class="clue-btn" onclick="openClue(this, 'int[][] nums = {24,6}; int sum = 0; for(int n: nums){sum+=n;} What is the value of sum?',['A: 8','B: 6','C: 12','D: 24'],2, 1000)">$1000</button>
 		</div>
 		<div class="jeopardy-column">
         <div class="category-header" >CSA JEAPORDY MCQ BOARD</div>
-        <button class="clue-btn" onclick="openClue(this, 'What does the following code print? System.out.println(2+3*5-1);',['A: 24','B: 14','C: 16','D: This will give a compile time error'],2)">$200</button>
-	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$400</button>
-	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$600</button>
-        <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$800</button>
-		<button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$1000</button>
-
+        <button class="clue-btn" onclick="openClue(this, 'What does the following code print? System.out.println(2+3*5-1);',['A: 24','B: 14','C: 16','D: This will give a compile time error'],2,200)">$200</button>
+	    <button class="clue-btn" onclick="openClue(this, 'What are the values of v1 and v2 after the following code segment is executed and the while loop finishes? int v1=0; int v2=2; while ((v2!=0)&&((v1/v2)>0)){v1 = v1+1;v2 = v2-1;}',['A:v1 = 0, v2 = 2','B:v1 = 3, v2 = 1','C:v1 = 2, v2 = 0','D:The loop won’t finish executing because of a division'],3,400)">$400</button>
+	    <button class="clue-btn" onclick="openClue(this, 'What is printed? String word= “COMPUTER”; System.out.println(word.substring(3,6));',['A: PUT','B: MPU','C: PUTE','D: UTE'],0,600)">$600</button>
+        <button class="clue-btn" onclick="openClue(this, 'What  is printed?String s = “HELLO”; for(int i = 0; i,s.length(); i++){System.out.println(s.charSt(i));}',['A: H','B: HELLO','C': O,'D: error'],1,800)">$800</button>
+		<button class="clue-btn" onclick="openClue(this, 'public static int mystery(int[] arr){int max = arr[0]; for(int i = 1; i < arr.length; i++){if(arr[i]>max){max=arr[i];}} return max;}',['A: Finds the smallest value in the array','B: Counts the elements in the array','C: Finds the largest value in the array','D: Computes the average of the array'],2,1000)">$1000</button>
 		</div>
 		<div class="jeopardy-column">
         <div class="category-header" >CSA JEAPORDY MCQ BOARD</div>
-        <button class="clue-btn" onclick="openClue(this, 'Given the following code segment, what is the value of n  when it finishes executing? Math.random() returns a decimal number between 0 and up to 1.double v = Math.random(); int n = (int)(v*11)-5;',['A: A random number from 0 to 10','B: A random number from 0 to 9','C: A random number from -5 to 5','D:A random number from -5 to 4'],2)">$200</button>
-	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$400</button>
-	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$600</button>
-        <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$800</button>
-		<button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$1000</button>
+        <button class="clue-btn" onclick="openClue(this, 'Given the following code segment, what is the value of n  when it finishes executing? Math.random() returns a decimal number between 0 and up to 1.double v = Math.random(); int n = (int)(v*11)-5;',['A: A random number from 0 to 10','B: A random number from 0 to 9','C: A random number from -5 to 5','D:A random number from -5 to 4'],2,200)">$200</button>
+	    <button class="clue-btn" onclick="openClue(this, 'What is printed as a result of the following code segment? for(int k = 0; k < 20; k+=2){ if(k%3==1){System.out.println(k + “ “);}}',['A: 1 4 7 10 13 16 19','B: 0 6 12 18','C: 0 2 4 6 8 10 14 16 18','D: 4 10 16'],3,400)">$400</button>
+	    <button class="clue-btn" onclick="openClue(this, 'What is the value of sum after the code executes? int[] nums = {2,4,6,8}; int sum = 0; for(int i = 0; i < nums.length; i++){sum+=nums[i];}',['A: 20','B: 8','C: 10','D: 20'],0,600)">$600</button>
+        <button class="clue-btn" onclick="openClue(this, 'Given: ArrayList<Integers> nums = new ArrayList<Integer>(); nums.add(4); nums.add(7); nums.add(2); nums.remove(1); What does the ArrayList contain afterward?',['A: (4,7)','B: (7,2)','C: (4,2)','D:(2,7)'],2,800)">$800</button>
+		<button class="clue-btn" onclick="openClue(this, 'What is printed? int total = 0; for(int i = 1; i<=5; i++){total +=i;} System.out.println(total);',['A: 10','B: 15','C:20','D:25'],1,1000)">$1000</button>
 		</div>
 		<div class="jeopardy-column">
         <div class="category-header" >CSA JEAPORDY MCQ BOARD</div>
-        <button class="clue-btn" onclick="openClue(this, 'What is the value of grade when the following code executes and score is 80? if (score>=90){grade = “A”;}if (score>=80){grade = “B”;}if (score>=70){grade = “C”;}if (score>=60){grade = “D”;}else{grade = “E”;}',['A','B','C','D'],3)">$200</button>
-	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$400</button>
-	    <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$600</button>
-        <button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$800</button>
-		<button class="clue-btn" onclick="openClue(this, 'This language runs in the browser.',['A','B','C','D'],2)">$1000</button>
+        <button class="clue-btn" onclick="openClue(this, 'What is the value of grade when the following code executes and score is 80? if (score>=90){grade = “A”;}if (score>=80){grade = “B”;}if (score>=70){grade = “C”;}if (score>=60){grade = “D”;}else{grade = “E”;}',['A','B','C','D'],3,200)">$200</button>
+	    <button class="clue-btn" onclick="openClue(this, 'public class Party{ private int numOfPeople; private String Host; public Party(String H, int p){Host = H;numOfPeople = p;}} Which of the following statements will create a Party object that represents a party that has 3 people at it?',['A: Party p = new Party(“Bob”,”3”);','B:Party p = new Party(“Bob”,3);','C: Party p = new Party(“Bob”,”three”);','D: Party p = new Party(“Bob”,”2+1”);'],1,400)">$400</button>
+	    <button class="clue-btn" onclick="openClue(this, 'ArrayList<String> names = new ArrayList<String>(); names.add(“Amy”); names.add(“Bob”); names.add(“Chris”); System.out.println(names.get(1));',['A: Amy','B: Bob','C: Chris','D: Error'],1,600)">$600</button>
+        <button class="clue-btn" onclick="openClue(this, 'What is printed? int[][] arr = {{1,2},{3,4}}; System.out.println(arr[1][0]);',['A: 1','B: 2','C: 3','D: 4'],2,800)">$800</button>
+		<button class="clue-btn" onclick="openClue(this, 'int[][] arr = {{1,2},{3,4}}; int sum = 0; for(int r = 0; r < arr.length; r++){for(int c = 0; c<arr[0].length; c++){sum+=arr[r][c];}} What is sum?',['A: 4','B: 6','C: 8','D: 10'],3,1000)">$1000</button>
 		</div>
     </div>
     <!-- INTERACTIVE MODAL POP-UP -->

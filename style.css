@@ -664,7 +664,7 @@ main h6 {
 
   .jeopardy-column {
     width: 100%;            /* Force column to take full width available */
-    max-width: 150px;       /* Keep the mobile columns from stretching too wide */
+    max-width: 120px;       /* Keep the mobile columns from stretching too wide */
   }
 
   .clue-btn {

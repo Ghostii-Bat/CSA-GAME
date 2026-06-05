@@ -211,6 +211,59 @@ aside {
 /* -------------------------------------------------------- */
 /* JEOPARDY STUFFZ */
 /* -------------------------------------------------------- */
+.scoreboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.team-card {
+    background-color: var(--background-color);
+    color: white;
+    border: 3px solid #447DA6;
+    padding: 15px;
+    min-width: 130px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+/* Visually marks whose turn it is to pick a clue */
+.team-card.active-turn {
+    transform: scale(1.08);
+    border-color: #ffffff;
+    box-shadow: 0 0 15px #ffffff;
+}
+
+.team-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.team-card .score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #447DA6;
+    margin-bottom: 10px;
+}
+
+.score-adjusters button {
+    background-color: var(--background-color);
+    border: none;
+    padding: 5px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 4px;
+    border-radius: 3px;
+}
+
+.score-adjusters button:hover {
+    background-color: #e0e0e0;
+}
 .jeapardy-column{
     display: grid;
     grid-template-rows: auto repeat(5,1fr);

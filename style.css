@@ -657,14 +657,19 @@ main h6 {
     padding: 15px;
   }
     .jeopardy-board {
-    flex-direction: row; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;    /* Center the stacked columns */
-    gap: 10px;              /* Increase gap to separate categories clearly */
+    gap: 10px;   /* Increase gap to separate categories clearly */
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .jeopardy-column {
     width: 100%;            /* Force column to take full width available */
     max-width: 120px;       /* Keep the mobile columns from stretching too wide */
+    flex-shrink: 1;
   }
 
   .clue-btn {

@@ -92,6 +92,8 @@
             <button class="close-btn" onclick="closeClue()">Close Clue</button>
         </div>
     </div>
+    
+    <div id="scoreboardContainer" class="scoreboard-row"></div>
   <!-- =============================================== -->
       <!-- FOOTER -->
       <!-- =============================================== -->
@@ -108,8 +110,55 @@
         const modalContent = document.getElementById('modalContent');
 		const buttonsContent = document.getElementById('choicesContainer');
         let currentButton = null;
+        let teams = []; // Holds team score data: [{ name: "Team 1", score: 0 }, ...]
+        let activeTeamIndex = 0; // Tracks whose turn it is to answer
+        let currentClueValue = 200; // Track the value of the active grid button (e.g. 200, 400)
+function initializeGame() {
+    // 1. Ask how many teams are playing
+    let numTeams = parseInt(prompt("How many teams are playing? (1-4)", "2"));
+    if (isNaN(numTeams) || numTeams < 1) numTeams = 2; // Default fallback
 
-        function openClue(button, clueText,choicesArray, correctIndex) {
+    const scoreboardContainer = document.getElementById('scoreboardContainer');
+    scoreboardContainer.innerHTML = ''; // Clear any placeholders
+
+    // 2. Loop and construct each team's score tracking object & HTML structure
+    for (let i = 0; i < numTeams; i++) {
+        teams.push({ name: `Team ${i + 1}`, score: 0 });
+
+        // Create the individual scoreboard card
+        const teamCard = document.createElement('div');
+        teamCard.className = 'team-card';
+        teamCard.id = `team-card-${i}`;
+        if (i === 0) teamCard.classList.add('active-turn'); // Team 1 starts
+
+        teamCard.innerHTML = `
+            <h3>Team ${i + 1}</h3>
+            <div class="score" id="score-val-${i}">$0</div>
+            <div class="score-adjusters">
+                <button onclick="adjustScore(${i}, ${1})">+</button>
+                <button onclick="adjustScore(${i}, ${-1})">-</button>
+            </div>
+        `;
+        scoreboardContainer.appendChild(teamCard);
+    }
+}
+
+// Automatically fire setup when the window loads
+window.onload = initializeGame;
+function adjustScore(teamIndex, direction) {
+    // direction is either 1 (add) or -1 (subtract)
+    teams[teamIndex].score += (currentClueValue * direction);
+    
+    // Update the visual scoreboard layout
+    const scoreElement = document.getElementById(`score-val-${teamIndex}`);
+    const scoreVal = teams[teamIndex].score;
+    
+    // Format negative scores properly like -$200 or $200
+    scoreElement.textContent = scoreVal < 0 ? `-$${Math.abs(scoreVal)}` : `$${scoreVal}`;
+}
+
+        function openClue(button, clueText,choicesArray, correctIndex,pointValue) {
+            currentClueValue = pointValue; // Save the points up for grabs
             currentButton = button;
             modalContent.textContent = clueText;
 			choicesContainer.innerHTML ='';
@@ -148,6 +197,15 @@
    			 currentButton.disabled = true; // Programmatically disable the game board button
   			}	
 }
+// --- AUTOMATIC TURN SWAPPER ---
+    // Remove active styling from the old team
+    document.getElementById(`team-card-${activeTeamIndex}`).classList.remove('active-turn');
+    
+    // Move to the next team rotationally
+    activeTeamIndex = (activeTeamIndex + 1) % teams.length;
+    
+    // Add active styling to the new team
+    document.getElementById(`team-card-${activeTeamIndex}`).classList.add('active-turn');
     </script>
 
 </body>

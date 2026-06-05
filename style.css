@@ -212,8 +212,7 @@ header {
     margin:0;
     height: 40vh;  
     width: 160px;  
-    font-family: sans-serif;
-    width: 100%;  
+    font-family: sans-serif; 
 }
 
 .team-card {

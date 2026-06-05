@@ -278,7 +278,7 @@ aside {
         }
 
         .modal-text {
-            font-size: 2.5rem;
+            font-size: clamp(14px, 5cqw, 28px);
             font-weight: bold;
             margin-bottom: 30px;
             text-transform: uppercase;
